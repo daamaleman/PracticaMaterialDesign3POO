@@ -5,6 +5,9 @@ package ni.edu.uam.mistareasapp
 // Pantalla: Registro de Tareas
 // ============================================================
 
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -110,8 +113,8 @@ fun TaskScreen() {
                         // Botón modo oscuro — componente interactivo #2
                         IconButton(onClick = { darkMode = !darkMode }) {
                             Icon(
-                                imageVector = if (darkMode) Icons.Filled.LightMode
-                                else Icons.Filled.DarkMode,
+                                imageVector = if (darkMode) Icons.Filled.Check
+                                else Icons.Filled.Clear,
                                 contentDescription = if (darkMode) "Modo claro"
                                 else "Modo oscuro"
                             )
@@ -249,13 +252,15 @@ fun InputCard(
                         selected = selectedPriority == priority,
                         onClick  = { onPriorityChange(priority) },
                         label    = { Text(priority.label) },
-                        leadingIcon = if (selectedPriority == priority) {{
-                            Icon(
-                                imageVector = Icons.Filled.Check,
-                                contentDescription = null,
-                                modifier = Modifier.size(FilterChipDefaults.IconSize)
-                            )
-                        }} else null
+                        leadingIcon = if (selectedPriority == priority) {
+                            {
+                                Icon(
+                                    imageVector = Icons.Filled.Check,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(FilterChipDefaults.IconSize)
+                                )
+                            }
+                        } else null
                     )
                 }
             }
@@ -398,7 +403,7 @@ fun EmptyState() {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Icon(
-            imageVector = Icons.Filled.CheckBox,
+            imageVector = Icons.Filled.Check,
             contentDescription = null,
             modifier = Modifier.size(48.dp),
             tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.4f)
@@ -419,11 +424,9 @@ fun EmptyState() {
 // ────────────────────────────────────────────────────────────
 // 8. PUNTO DE ENTRADA
 // ────────────────────────────────────────────────────────────
-// En MainActivity.kt:
-//
-// class MainActivity : ComponentActivity() {
-//     override fun onCreate(savedInstanceState: Bundle?) {
-//         super.onCreate(savedInstanceState)
-//         setContent { TaskScreen() }
-//     }
-// }
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent { TaskScreen() }
+    }
+}
