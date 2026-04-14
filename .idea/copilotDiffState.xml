@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/README.md" />
+              <option name="updatedContent" value="&lt;div align=&quot;center&quot;&gt;&#10;&#10;# MisTareasApp&#10;&#10;Aplicacion Android de gestion de tareas construida con **Kotlin + Jetpack Compose + Material Design 3**.&#10;&#10;&lt;p&gt;&#10;  &lt;img alt=&quot;Kotlin&quot; src=&quot;https://img.shields.io/badge/Kotlin-2.x-7F52FF?logo=kotlin&amp;logoColor=white&quot; /&gt;&#10;  &lt;img alt=&quot;Jetpack Compose&quot; src=&quot;https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&amp;logoColor=white&quot; /&gt;&#10;  &lt;img alt=&quot;Min SDK&quot; src=&quot;https://img.shields.io/badge/minSdk-24-3DDC84?logo=android&amp;logoColor=white&quot; /&gt;&#10;  &lt;img alt=&quot;Target SDK&quot; src=&quot;https://img.shields.io/badge/targetSdk-36-34A853?logo=android&amp;logoColor=white&quot; /&gt;&#10;&lt;/p&gt;&#10;&#10;&lt;/div&gt;&#10;&#10;---&#10;&#10;## Descripcion&#10;&#10;`MisTareasApp` permite crear, editar y gestionar tareas con un flujo visual simple y moderno.&#10;La interfaz usa Compose puro y una experiencia centrada en productividad diaria.&#10;&#10;## Funcionalidades principales&#10;&#10;- Creacion de tareas con nombre, descripcion, fecha de inicio y fecha de fin.&#10;- Selector de fechas con calendario (`DatePickerDialog`).&#10;- Estados de tarea por chip: `En espera`, `Iniciado`, `Finalizado`.&#10;- Confirmacion de finalizacion mediante check dedicado cuando la tarea esta en `Finalizado`.&#10;- Edicion completa de tareas con boton de lapiz.&#10;- Seleccion/deseleccion masiva de tareas.&#10;- Indicador de progreso diario.&#10;- Persistencia local (las tareas se mantienen al reiniciar la app).&#10;- Modo oscuro/claro.&#10;&#10;## Stack tecnico&#10;&#10;- **Lenguaje:** Kotlin&#10;- **UI:** Jetpack Compose + Material 3&#10;- **Arquitectura:** Estado local en Compose (single-activity)&#10;- **Persistencia:** `SharedPreferences` + JSON (`org.json`)&#10;- **Build System:** Gradle Kotlin DSL&#10;&#10;## Requisitos&#10;&#10;- Android Studio (version reciente recomendada)&#10;- JDK 11&#10;- Android SDK:&#10;  - `minSdk = 24`&#10;  - `targetSdk = 36`&#10;  - `compileSdk = 36`&#10;&#10;## Ejecucion local&#10;&#10;### Windows (PowerShell)&#10;&#10;```powershell&#10;.\gradlew.bat :app:installDebug&#10;```&#10;&#10;### Build rapido&#10;&#10;```powershell&#10;.\gradlew.bat :app:compileDebugKotlin&#10;```&#10;&#10;## Estructura del proyecto&#10;&#10;```text&#10;MisTareasApp/&#10;├─ app/&#10;│  ├─ src/main/java/ni/edu/uam/mistareasapp/MainActivity.kt&#10;│  └─ build.gradle.kts&#10;├─ build.gradle.kts&#10;├─ settings.gradle.kts&#10;└─ gradle/libs.versions.toml&#10;```&#10;&#10;## Hoja de ruta&#10;&#10;- [ ] Migrar persistencia a DataStore o Room.&#10;- [ ] Agregar filtros por estado y fecha.&#10;- [ ] Incorporar pruebas UI con Compose Test.&#10;- [ ] Mejorar accesibilidad y localizacion.&#10;&#10;## Autor&#10;&#10;Proyecto academico base para practica de Programacion Orientada a Objetos + Material Design 3.&#10;&#10;---&#10;&#10;&lt;p align=&quot;center&quot;&gt;&lt;sub&gt;Hecho con Kotlin y Jetpack Compose.&lt;/sub&gt;&lt;/p&gt;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
